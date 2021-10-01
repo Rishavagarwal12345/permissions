@@ -11,15 +11,12 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.google.android.material.snackbar.Snackbar
-
-
 const val PERMISSION_REQUEST_PHONE_CALL = 0
 
 class MainActivity : AppCompatActivity(),ActivityCompat.OnRequestPermissionsResultCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         val callSupport = findViewById<Button>(R.id.callkaro)
         callSupport.setOnClickListener{
             makePhoneCallAfterPermission(it)
@@ -81,5 +78,4 @@ class MainActivity : AppCompatActivity(),ActivityCompat.OnRequestPermissionsResu
             }
         }
     }
-
 }
